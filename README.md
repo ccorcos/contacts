@@ -10,14 +10,17 @@ Goals:
 rm -f ./contacts && clang -framework Foundation -framework AddressBook contacts.m -o contacts && ./contacts
 ```
 
-To Do:
-- node.js native bindings: https://nodejs.org/api/addons.html
-
 ### Importing Gmail contacts
+
+- Use google oauth with offline access OR just login to Google and use electron
 
 ### Importing Facebook
 
+- Get all mututal friends
+
 ### Importing Twitter
+
+- Get all follows / mutual follows
 
 ### Database Schema
 
@@ -28,5 +31,7 @@ To Do:
 
 - WebRTC file sharing
 - WebRTC chat / email app
+- Events app. Invite via email. RSVP. Calendar.
+- Explore DAV apis.
 
 - Sync other data from the filesystem. 200 points of light.

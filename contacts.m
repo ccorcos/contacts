@@ -88,6 +88,8 @@ int main(int argc, char **argv) {
   // Get a list of all properties on the record.
   NSArray *properties = [ABPerson properties];
 
+  NSMutableArray * json = [[NSMutableArray alloc] init];
+
   for (ABPerson *person in people) {
     // Move properties into a dictionary.
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -99,7 +101,8 @@ int main(int argc, char **argv) {
       [dict setObject:val forKey:property];
     }
     // Output JSON separated by newlines.
-
-    printf("%s\n", [stringify(serialize(dict)) UTF8String]);
+    [json addObject:serialize(dict)];
   }
+
+  printf("%s\n", [stringify(serialize(json)) UTF8String]);
 }

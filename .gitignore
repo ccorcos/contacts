@@ -1,3 +1,5 @@
 .DS_Store
 contacts
 contacts.json
+contacts-out.json
+node_modules
